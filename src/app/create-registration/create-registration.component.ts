@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import { User } from '../models/user.model';
@@ -35,20 +35,20 @@ export class CreateRegistrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email:  ['', [Validators.required, Validators.email]],
-      mobile: ['', Validators.required],
-      weight: ['', Validators.required],
-      height: ['', Validators.required],
-      bmi: [''],
-      bmiResult: [''],
-      gender: ['', Validators.required],
-      requireTrainer: ['', Validators.required],
-      package: ['', Validators.required],
-      important: ['', Validators.required],
-      haveGymBefore: ['', Validators.required],
-      enquiryDate: ['', Validators.required]
+      firstName: [null, Validators.required],
+      lastName: [null, Validators.required],
+      email:  [null, [Validators.required, Validators.email]],
+      mobile: [null, Validators.required],
+      weight: [null, Validators.required],
+      height: [null, Validators.required],
+      bmi: [null],
+      bmiResult: [null],
+      gender: [null, Validators.required],
+      requireTrainer: [null, Validators.required],
+      package: [null, Validators.required],
+      important: [null, Validators.required],
+      haveGymBefore: [null, Validators.required],
+      enquiryDate: [null, Validators.required]
     });
 
     this.registerForm.controls['height'].valueChanges.subscribe(res => {
@@ -65,7 +65,7 @@ export class CreateRegistrationComponent implements OnInit {
   }
 
   submit(){
-    console.log(this.registerForm)
+    console.log(this.registerForm.value.id)
     this.api.postRegistration(this.registerForm.value).subscribe(res => {
       this.toastService.success({detail: 'Success', summary: 'Enquiry Added', duration: 3000});
       this.registerForm.reset();

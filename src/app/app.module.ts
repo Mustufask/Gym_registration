@@ -1,6 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { provideDatabase, getDatabase } from '@angular/fire/database'
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import 'firebase/database'
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,6 +38,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './services/api.service';
 import { User } from './models/user.model';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -46,6 +54,11 @@ import { User } from './models/user.model';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
+
+    // provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    // provideDatabase(() => getDatabase()),
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
+    // AngularFireDatabaseModule,
 
     NgToastModule,
     NgConfirmModule,

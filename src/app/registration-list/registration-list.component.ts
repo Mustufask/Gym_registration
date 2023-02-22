@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import { NgConfirmService } from 'ng-confirm-box';
+import { map } from 'rxjs';
 import { User } from '../models/user.model';
 import { ApiService } from '../services/api.service';
 
@@ -33,6 +34,7 @@ export class RegistrationListComponent implements OnInit {
       this.dataSource = new MatTableDataSource(this.users);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+      console.log(res)
     })
   }
 

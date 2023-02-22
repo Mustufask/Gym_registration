@@ -118,6 +118,46 @@
       "haveGymBefore": "Yes",
       "enquiryDate": "2023-02-18T18:30:00.000Z",
       "id": 9
+    },
+    {
+      "firstName": "mark",
+      "lastName": "halk",
+      "email": "mark@123",
+      "mobile": 1234556677,
+      "weight": 77,
+      "height": 88,
+      "bmi": 0.0010330578512396695,
+      "bmiResult": "Underweight",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "package": "Quarterly",
+      "important": [
+        "Sugar Craving Body",
+        "Fitness"
+      ],
+      "haveGymBefore": "Yes",
+      "enquiryDate": "2023-02-24T18:30:00.000Z",
+      "id": 10
+    },
+    {
+      "firstName": "mark",
+      "lastName": "halk",
+      "email": "mark@123",
+      "mobile": 1234556677,
+      "weight": 77,
+      "height": 88,
+      "bmi": 0.0010330578512396695,
+      "bmiResult": "Underweight",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "package": "Quarterly",
+      "important": [
+        "Sugar Craving Body",
+        "Fitness"
+      ],
+      "haveGymBefore": "Yes",
+      "enquiryDate": "2023-02-24T18:30:00.000Z",
+      "id": 11
     }
   ]
 }

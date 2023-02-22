@@ -1,5 +1,6 @@
 export class User {
       firstName!: string;
+      key?: string;
       lastName!: string;
       email!: string;
       mobile!: number;
